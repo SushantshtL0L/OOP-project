@@ -1,9 +1,8 @@
-package automobile.rentals.View;
+package oop.project.view;
  
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
  
 public class user_forgot_password extends JFrame {
  
@@ -81,12 +80,9 @@ public class user_forgot_password extends JFrame {
         login_button.setBounds(140, 710, 150, 45);
         add(login_button);
  
-        login_button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new user_login();
-                dispose(); // Close the current HomePage
-            }
+        login_button.addActionListener((ActionEvent e) -> {
+            new user_login();
+            dispose(); // Close the current HomePage
         });
  
         setVisible(true);
