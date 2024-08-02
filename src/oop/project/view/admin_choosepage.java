@@ -1,4 +1,4 @@
-package automobile.rentals.View;
+package oop.project.view;
  
  
 import javax.swing.*;
@@ -6,8 +6,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
  
-public class admin_choose_page extends JFrame {
-    admin_choose_page(){
+public class admin_choosepage extends JFrame {
+       admin_choosepage(){
          setSize(1450,900);
         setLayout(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -43,13 +43,10 @@ public class admin_choose_page extends JFrame {
         car_image_button.setBounds(300,300,300,370);
         add(car_image_button);
         
-        car_image_button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new admin_four_wheeler();
-                dispose(); // Close the current HomePage
-            }
-        });
+        car_image_button.addActionListener((ActionEvent e) -> {
+            new admin_four_wheeler();
+            dispose(); // Close the current HomePage
+         });
         
         
         JLabel four_text=new JLabel("Four Wheelers");
@@ -96,7 +93,7 @@ public class admin_choose_page extends JFrame {
     
     
     public static void main(String[] args){
-    admin_choose_page choose=new admin_choose_page();
+    admin_choosepage choose=new admin_choosepage();
     choose.setVisible(true);
     
  
