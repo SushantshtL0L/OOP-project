@@ -1,4 +1,4 @@
-package automobile.rentals.View;
+package oop.project.view;
  
  
 import javax.swing.*;
@@ -43,13 +43,10 @@ public class user_choose_page extends JFrame {
         car_image_button.setBounds(300,300,300,370);
         add(car_image_button);
         
-        car_image_button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new user_four_wheeler();
-                dispose(); // Close the current HomePage
-            }
-        });
+        car_image_button.addActionListener((ActionEvent e) -> {
+            new user_four_wheeler();
+            dispose(); // Close the current HomePage
+         });
         
         
         JLabel four_text=new JLabel("Four Wheelers");
